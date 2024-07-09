@@ -1,0 +1,29 @@
+modules:
+  confluence:homepageFeed:
+    - key: homepage-forge-hello-world-homepage-feed
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: What's On
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/63a5ae1c-5d1a-4026-b7b2-101befef9e55
+permissions:
+  scopes:
+    - read:confluence-content.summary
+  external:
+    images:
+      - 'https://www.roomtoread.org/media/l2vhltjx/microsoftteams-image-14.png'
+      - 'https://www.lifelinesouthcoast.org.au/wp-content/uploads/2021/11/LLSC_Homepage_Volunteer.jpg'
+      - 'https://www.experienceeducate.org/s/Educate-logo-vertical-box-no-mission-no-background.png'
+
+
+
